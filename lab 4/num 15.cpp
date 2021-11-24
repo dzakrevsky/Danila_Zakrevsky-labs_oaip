@@ -11,7 +11,7 @@ int main(){
         a[i] = new double[n];
     }
 
-    for (int j = 0; j < n; ++j) {  //Ëîãèêà
+    for (int j = 0; j < n; ++j) {  
         for (int i = 0; i <= maxl; ++i) {
             if (i == maxl) {
                 for (int z = j; z > -1; --z) {
