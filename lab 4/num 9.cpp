@@ -6,10 +6,9 @@ int main() {
     int** a2;
     int** a3;
 
-    std::cout << "set 2 matrix length(M x N è N x K): ";
+    std::cout << "set 2 m, n, k: ";
 
     int n, m, k;
-
 
     std::cin >> m >> n >> k;
 
@@ -103,6 +102,5 @@ int inputArrInt(int i2, int j2) {
         std::cout << "incorrect input";
         return 0;
     }
-
     return value;
 }
