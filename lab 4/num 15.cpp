@@ -1,12 +1,9 @@
 #include <iostream>
 #include <iomanip>
 
-int main()
-{
-    setlocale(LC_ALL, "ru");
-
+int main(){
     int n, maxl = 0, k = 1;
-    std::cout << "Введите размер таблицы N x N: ";
+    std::cout << "set N: ";
     std::cin >> n;
 
     double** a = new double* [n];
@@ -14,7 +11,7 @@ int main()
         a[i] = new double[n];
     }
 
-    for (int j = 0; j < n; ++j) {  //Логика
+    for (int j = 0; j < n; ++j) {  //Г‹Г®ГЈГЁГЄГ 
         for (int i = 0; i <= maxl; ++i) {
             if (i == maxl) {
                 for (int z = j; z > -1; --z) {
@@ -30,21 +27,13 @@ int main()
         ++maxl;
     }
 
-    std::cout << "Заполненная таблица:\n";
+    std::cout << "mattrix:\n";
 
-    for (long long int i = 0; i < n; ++i) {
-        for (long long int j = 0; j < n; ++j) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
             std::cout << std::setw(4) << a[i][j] << " ";
         }
         std::cout << '\n';
     }
-
-    for (int i = 0; i < n; ++i)
-    {
-        delete[] a[i];
-    }
-
-    delete[] a;
-
     return 0;
 }
