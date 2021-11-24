@@ -20,7 +20,7 @@ int main()
     double n, m, sum, k;
 
 
-    std::cout << "Введите n и m: \n";
+    std::cout << "set n & m: \n";
 
     std::cin >> n >> m;
 
@@ -28,14 +28,8 @@ int main()
         std::cin.ignore(1, ' ');
 
     while (std::cin.fail() || std::cin.peek() != '\n' || n <= 0 || m <= 0 || n != (int)n || m != (int)m) {
-        std::cout << "Введены некоректные данные =( ";
-
-        std::cin.clear();
-        std::cin.ignore(3256, '\n');
-
-        std::cin >> n >> m;
-        while (std::cin.peek() == ' ')
-            std::cin.ignore(1, ' ');
+        std::cout << "incorrect input";
+        return 0;
     }
 
     std::cout << '\n';
@@ -47,7 +41,7 @@ int main()
         a2[i] = new double[m];
     }
 
-    std::cout << "Введите элементы массива:\n";
+    std::cout << "set el of array:\n";
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             a1[i][j] = inputDouble(i, j);
@@ -85,7 +79,7 @@ int main()
         }
     }
 
-    std::cout << "\nМассив, до проведения операции сглаживания:\n";
+    std::cout << "\nbefore:\n";
 
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
@@ -100,7 +94,7 @@ int main()
     }
     delete[] a1;
 
-    std::cout << "\nМассив, после проведённой операции сглаживания:\n";
+    std::cout << "\nafter:\n";
 
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
