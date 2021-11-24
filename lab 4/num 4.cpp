@@ -41,10 +41,10 @@ int main() {
             else if ((j == 0 && i != 0 && i != n - 1) && (a[i][j] < a[i][j + 1]) && (a[i][j] < a[i + 1][j]) && (a[i][j] < a[i - 1][j])) {
                 std::cout << "row " << i << " colm " << j << " min = " << a[i][j] << '\n';
                 min++;}
-            else if ((j == n - 1 && i != 0 && i != n - 1) && (a[i][j] < a[i][j - 1]) && (a[i][j] < a[i + 1][j]) && (a[i][j] < a[i - 1][j])) {
+            else if ((a[i][j] < a[i][j - 1]) && (a[i][j] < a[i][j + 1]) && (a[i][j] < a[i + 1][j]) && (a[i][j] < a[i - 1][j])) {  
                 std::cout << "row " << i << " colm " << j << " min = " << a[i][j] << '\n';
                 min++;}
-            else if ((a[i][j] < a[i][j - 1]) && (a[i][j] < a[i][j + 1]) && (a[i][j] < a[i + 1][j]) && (a[i][j] < a[i - 1][j])) {  
+            else if ((j == n - 1 && i != 0 && i != n - 1) && (a[i][j] < a[i][j - 1]) && (a[i][j] < a[i + 1][j]) && (a[i][j] < a[i - 1][j])) {
                 std::cout << "row " << i << " colm " << j << " min = " << a[i][j] << '\n';
                 min++;}
         }
