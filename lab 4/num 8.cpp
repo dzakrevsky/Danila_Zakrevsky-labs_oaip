@@ -2,12 +2,9 @@
 #include <ctime>
 
 int main() {
-    int n, temp, j, min1 = -1, max1 = -1, min, max = -1, k = 0;
+    int n, j, temp, min = n + 1, min1 = -1, max1 = -1, max = -1, k = 0;
 
-    std::cout << "set n ";
-    std::cin >> n;
-
-    min = n + 1;
+    std::cout << "set n "; std::cin >> n;
 
     int* a = new int[n];
 
