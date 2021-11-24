@@ -21,11 +21,11 @@ int main() {
 	}
 	cout << endl;
 	
-	arrayUnique(arr, length);
+	Uniquearray(arr, length);
 	return 0;
 }
 
-int arrayUnique(int* arr, int length) {
+int Uniquearray(int* arr, int length) {
 	int i, j, n;
 	for (i = 0; i < length - 1; i++)
 		for (j = i + 1; j < length; j++)
