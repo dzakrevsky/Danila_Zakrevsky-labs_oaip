@@ -94,9 +94,6 @@ int main() {
     else if (diagonal4 > diagonal2 && diagonal4 > diagonal3 && diagonal4 > diagonal1) {
         std::cout << "4 diag is longest = " << diagonal4 << '.';
     }
-    else if (diagonal1 == diagonal2 && diagonal2 == diagonal3 && diagonal3 == diagonal4) {
-        std::cout << "all diag are the same = " << diagonal1 << '.';
-    }
     else if (diagonal1 == diagonal2 && diagonal2 == diagonal3) {
         std::cout << "1 and 2 diag are longest = " << diagonal1 << '.';
     }
@@ -112,18 +109,22 @@ int main() {
     else if (diagonal1 == diagonal2) {
         std::cout << "1 diag = 2 diag = " << diagonal1 << '.';
     }
-    else if (diagonal2 == diagonal3) {
-        std::cout << "2 diag = 3 diag = " << diagonal2 << '.';
-    }
-    else if (diagonal3 == diagonal4) {
-        std::cout << "3 diag = 4 diag " << diagonal3 << '.';
-    }
     else if (diagonal1 == diagonal4) {
         std::cout << "1 diag = 4 diag = " << diagonal1 << '.';
     }
     else if (diagonal1 == diagonal3) {
         std::cout << "1 diag = 3 diag = " << diagonal1 << '.';
     }
+    else if (diagonal2 == diagonal3) {
+        std::cout << "2 diag = 3 diag = " << diagonal2 << '.';
+    }
+    else if (diagonal3 == diagonal4) {
+        std::cout << "3 diag = 4 diag " << diagonal3 << '.';
+    }
+    else if (diagonal1 == diagonal2 && diagonal2 == diagonal3 && diagonal3 == diagonal4) {
+        std::cout << "all diag are the same = " << diagonal1 << '.';
+    }
+    
 
 
     for (int i = 0; i < n; ++i)
@@ -155,6 +156,5 @@ long long int inputInt() {
         std::cout << "incorrect input data";
         return 0;
     }
-
     return value;
 }
