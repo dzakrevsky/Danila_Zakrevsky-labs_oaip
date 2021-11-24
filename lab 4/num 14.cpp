@@ -42,14 +42,14 @@ int main() {
         for (int j = 0; j < m; ++j) {
             k = 0;
             if (a[i][j] == '.') {
-                if (i - 1 > -1 && a[i - 1][j] == '*') k++;
-                if (i + 1 < n && a[i + 1][j] == '*') k++;
-                if (j - 1 > -1 && a[i][j - 1] == '*') k++;
-                if (j + 1 < m && a[i][j + 1] == '*') k++;
                 if (i - 1 > -1 && j - 1 > -1 && a[i - 1][j - 1] == '*') k++;
                 if (i + 1 < n && j - 1 > -1 && a[i + 1][j - 1] == '*') k++;
                 if (i - 1 > -1 && j + 1 < m && a[i - 1][j + 1] == '*') k++;
                 if (i + 1 < n && j + 1 < m && a[i + 1][j + 1] == '*') k++;
+                if (i - 1 > -1 && a[i - 1][j] == '*') k++;
+                if (i + 1 < n && a[i + 1][j] == '*') k++;
+                if (j - 1 > -1 && a[i][j - 1] == '*') k++;
+                if (j + 1 < m && a[i][j + 1] == '*') k++;
                 a[i][j] = k + '0';
             }
         }
@@ -73,7 +73,7 @@ int main() {
     return 0;
 }
 
-char inputChar(long long int i2, long long int j2) {
+char inputChar(int i2, int j2) {
     char value;
 
     std::cin >> value;
