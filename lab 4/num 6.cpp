@@ -67,18 +67,11 @@ int main(){
     }
     std::cout << "\narray b\n";
 
-
     for (i = 0; i < n; i++) {
         for (j = 0; j < m; j++) {
             std::cout << std::setw(6) << b[i][j] << "  ";
         }
         std::cout << '\n';
     }
-    for (i = 0; i < n; i++)
-        delete[] a[i];
-    delete[]a;
-    for (i = 0; i < n; i++)
-        delete[] b[i];
-    delete[]b;
     return 0;
 }
