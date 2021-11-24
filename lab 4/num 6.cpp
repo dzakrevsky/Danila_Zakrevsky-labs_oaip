@@ -23,7 +23,6 @@ int main(){
         for (j = 0; j < m; j++) {
             std::cout << "set a[" << i << "][" << j << "] ";
             std::cin >> a[i][j];
-
         }
 
     std::cout << "array a\n";
