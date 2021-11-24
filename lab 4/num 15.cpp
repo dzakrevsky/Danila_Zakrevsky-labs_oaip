@@ -2,7 +2,7 @@
 #include <iomanip>
 
 int main(){
-    int n, maxl = 0, k = 1;
+    int n, max = 0, k = 1;
     std::cout << "set N: ";
     std::cin >> n;
 
@@ -12,8 +12,8 @@ int main(){
     }
 
     for (int j = 0; j < n; ++j) {  
-        for (int i = 0; i <= maxl; ++i) {
-            if (i == maxl) {
+        for (int i = 0; i <= max; ++i) {
+            if (i == max) {
                 for (int z = j; z > -1; --z) {
                     a[i][z] = k;
                     ++k;
@@ -24,7 +24,7 @@ int main(){
                 ++k;
             }
         }
-        ++maxl;
+        ++max;
     }
 
     std::cout << "mattrix:\n";
