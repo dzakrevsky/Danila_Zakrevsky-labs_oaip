@@ -1,44 +1,79 @@
-#include<iostream>
+#include <iostream> 
+#include <cmath> 
+#include<conio.h> 
+#include<string> 
 using namespace std;
-
-
-void qsort(int arr[], int fst, int last)
-{
-    int i, j, pivot, tmp;
-    if (fst < last)
-    {
-        pivot = fst;
-        i = fst;
-        j = last;
-        while (i < j)
-        {
-            while (arr[i] <= arr[pivot] && i < last)
-                i++;
-            while (arr[j] > arr[pivot])
-                j--;
-            if (i < j)
-            {
-                tmp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = tmp;
+int main(int args, double, char * argv[]) {
+setlocale(LC_ALL, "Russian");
+int c, o, t, u, v, n = 0;
+int f = 0;
+int b = 0;
+int m = 0;
+o = 0;
+u = 0;
+t = 0;
+string sr; 
+cout << "Введите строку" << endl;
+getline(cin, sr); 
+for (int i = 0; i < sr.length(); i++) {
+    if (sr[i] == '.') { 
+        if (!(isdigit(sr[i + 1])) || !(isdigit(sr[i - 1]))) { 
+            t = 1;
+            break;
+        }
+        else {
+            for (v = i - 1; v > 0; v--) { 
+                if (isdigit(sr[v])) {
+                    b = v;
+                }
+                else {
+                    if (sr[v] == '-') {
+                        b = v;
+                        break;
+                    }
+                    else break;
+                }
+            }
+            for (f = b; f < sr.length(); f++) {
+                if (sr[f] == '.') {
+                    break;
+                }
+                if (sr[f] == '-') {
+                    continue;
+                }
+                o++;
             }
         }
-        tmp = arr[pivot];
-        arr[pivot] = arr[j];
-        arr[j] = tmp;
-        qsort(arr, fst, j - 1);
-        qsort(arr, j + 1, last);
+        f = 0;
+        for (int n = i + 1; n < sr.length(); n++) {
+            if (isdigit(sr[n])) {
+                m = n;  
+            }
+            else break;
+        }
+        for (f = m; f > 0; f--) {  
+            if (sr[f] == '.') {
+                break;
+            }
+            u++;
+        }
     }
 }
+if (o == u) {
+    c = 0;
+}
+else {
+    c = 1;
+}
+if (c == 0 && t == 0) {
+    cout << "Число = ";
+    for (int i = b; i <= m; i++) {
+        cout << sr[i];
+    }
+}
+else {
+    cout << "такого числа нет";
+}
+cout << endl;
 
-int main() {
-    int a[] = { 10,9,8,7,6,100,5,4,3,1,2 };
-
-    qsort(a, 0, 10);
-
-    cout << "Sorted elements: ";
-    for (int i = 0; i < 11; i++)
-        cout << a[i] << endl;
-
-    return 0;
 }
