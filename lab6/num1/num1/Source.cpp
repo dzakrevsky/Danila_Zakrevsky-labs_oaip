@@ -18,8 +18,7 @@ getline(cin, sr);
 for (int i = 0; i < sr.length(); i++) {
     if (sr[i] == '.') { 
         if (!(isdigit(sr[i + 1])) || !(isdigit(sr[i - 1]))) { 
-            t = 1;
-            break;
+            continue;
         }
         else {
             for (v = i - 1; v > 0; v--) { 
