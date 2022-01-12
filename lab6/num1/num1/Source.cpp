@@ -3,7 +3,7 @@
 #include<conio.h> 
 #include<string> 
 using namespace std;
-int main(int args, double, char * argv[]) {
+int main() {
 setlocale(LC_ALL, "Russian");
 int c, o, t, u, v, n = 0;
 int f = 0;
